@@ -15,14 +15,14 @@ const WaitingItem = ({ text, entered, onEnter, onLeave }) => {
 
 const WaitingList = ({ input, waitingList, onChange, onSubmit, onEnter, onLeave }) => {
 
-  const waitingItems = waitingLsit.map(item => (
-    <waitingItems
-      key={item.id}
-      text={item.text}
-      entered={item.entered}
-      id={item.id}
-      onEnter={() => onEnter(item.id)}
-      onLeave={() => onLeave(item.id)}
+  const waitingItems = waitingList.map(w => (
+    <WaitingItem
+      key={w.id}
+      text={w.name}
+      entered={w.entered}
+      id={w.id}
+      onEnter={() => onEnter(w.id)}
+      onLeave={() => onLeave(w.id)}
     />
   ))
 

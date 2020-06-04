@@ -13,6 +13,7 @@ export const leave = id => ({ type: LEAVE, payload: id });
 
 */
 
+let id = 3;
 export const changeInput = createAction(CHANGE_INPUT, text => text);
 export const create = createAction(CREATE, text => ({ text, id: id++ }));
 export const enter = createAction(ENTER, id => id);
@@ -48,7 +49,7 @@ export default handleActions({
         ...state,
         list: state.list.concat({
             id: action.payload.id,
-            name: action.payload, text,
+            name: action.payload.text,
             entered: false
         })
     }),

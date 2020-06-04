@@ -30,14 +30,16 @@ class WaitingListContainer extends Component {
 
     render() {
         const { input, list } = this.props;
-        <WaitingList
-            input={input}
-            waitingList={list}
-            onChange={this.handleChange}
-            onSubmit={this.handleSubmit}
-            onEnter={this.handleEnter}
-            onLeave={this.handleLeave}
-        />
+        return (
+            <WaitingList
+                input={input}
+                waitingList={list}
+                onChange={this.handleChange}
+                onSubmit={this.handleSubmit}
+                onEnter={this.handleEnter}
+                onLeave={this.handleLeave}
+            />
+        );
     }
 }
 
